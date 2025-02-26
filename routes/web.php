@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,6 +17,8 @@ Route::get('/dashboard', function () {
 Route::resource('articles', ArticleController::class)->middleware(['auth', 'verified']);
 
 Route::resource('news', NewsController::class)->middleware(['auth', 'verified']);
+
+Route::resource('reports', ReportController::class)->middleware(['auth','verified']);
 
 
 
