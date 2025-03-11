@@ -12,7 +12,7 @@
 <div class="container max-w-7xl font-bold mx-auto py-6 px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center mb-8">
         <h1 class="text-3xl font-bold text-gray-800">Latest News</h1>
-        <a href="{{ route('news.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+        <a href="{{ route('admin.news.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
             + Create New
         </a>
     </div>
@@ -34,8 +34,8 @@
                     <p class="text-gray-600 mb-4">{{ Str::limit($item->content, 30) }}</p>
                     <div class="flex justify-between items-center">
                         <div class="space-x-2">
-                            <a href="{{ route('news.edit', $item->id) }}" class="text-blue-500 hover:text-blue-700">Edit</a>
-                            <form action="{{ route('news.destroy', $item->id) }}" method="POST" class="inline">
+                            <a href="{{ route('admin.news.edit', $item->id) }}" class="text-blue-500 hover:text-blue-700">Edit</a>
+                            <form action="{{ route('admin.news.destroy', $item->id) }}" method="POST" class="inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="text-red-500 hover:text-red-700" onclick="return confirm('Are you sure?')">Delete</button>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="flex justify-between items-center mt-4"> <!-- Tambahkan div wrapper ini -->
                         <span class="text-sm text-gray-500">{{ $item->created_at->format('d M Y') }}</span>
-                        <a href="{{ route('news.show', $item->id) }}" class="text-blue-500 hover:text-blue-700">Read More →</a>
+                        <a href="{{ route('admin.news.show', $item->id) }}" class="text-blue-500 hover:text-blue-700">Read More →</a>
                     </div>
                 </div>
             </div>

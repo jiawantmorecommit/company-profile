@@ -12,7 +12,7 @@
 <div class="container max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center mb-8">
         <h1 class="text-3xl font-bold text-gray-800">Daftar Laporan Terbaru</h1>
-        <a href="{{ route('reports.create') }}" 
+        <a href="{{ route('admin.reports.create') }}" 
            class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
             + Buat Laporan Baru
         </a>
@@ -37,11 +37,11 @@
                     
                     <div class="flex justify-between items-center">
                         <div class="space-x-2">
-                            <a href="{{ route('reports.edit', $report->id) }}" 
+                            <a href="{{ route('admin.reports.edit', $report->id) }}" 
                                class="text-blue-500 hover:text-blue-700">
                                 Edit
                             </a>
-                            <form action="{{ route('reports.destroy', $report->id) }}" method="POST" class="inline">
+                            <form action="{{ route('admin.reports.destroy', $report->id) }}" method="POST" class="inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" 

@@ -282,27 +282,50 @@
     </div>
 </section>
 
-<section>
-    <div class="berita">
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12">Berita Terkini</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            @foreach($featuredNews as $news)
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                 data-aos="fade-up" data-aos-delay="{{ $loop->index * 50 }}">
+                @if($news->image)
+                <img src="{{ asset('storage/' . $news->image) }}" 
+                     alt="{{ $news->title }}" 
+                     class="w-full h-48 object-cover">
+                @endif
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ $news->title }}</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        {{ Str::limit(strip_tags($news->content), 100) }}
+                    </p>
+                    <a href="{{ route('public.news.show', $news) }}" 
+                       class="text-blue-600 hover:text-blue-800 font-medium">
+                        Read More →
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
 </section>
 
 
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         Swal.fire({
             width: '60%',
-            imageUrl: "{{ asset('landing-page/images/Peringatan Penipuan.png') }}", 
-            imageAlt: 'Gambar', 
+            imageUrl: "{{ asset('landing-page/images/Peringatan Penipuan.png') }}",
+            imageAlt: 'Gambar',
             showCancelButton: false,
-            confirmButtonText: 'Tutup', 
+            confirmButtonText: 'Tutup',
             confirmButtonColor: '#2563eb',
             customClass: {
                 popup: 'swal2-popup-custom rounded-xl',
                 confirmButton: 'swal2-confirm-custom px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors'
             },
             allowOutsideClick: false
-            
+
         });
     });
 </script>

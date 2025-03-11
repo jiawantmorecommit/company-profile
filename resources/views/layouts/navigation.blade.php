@@ -17,17 +17,17 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.index')">
+                    <x-nav-link :href="route('admin.articles.index')" :active="request()->routeIs('admin.articles.index')">
                         {{ __('Artikel') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('news.index')" :active="request()->routeIs('news.index')">
+                    <x-nav-link :href="route('admin.news.index')" :active="request()->routeIs('admin.news.index')">
                         {{ __('Berita') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.index')">
+                    <x-nav-link :href="route('admin.reports.index')" :active="request()->routeIs('admin.reports.index')">
                         {{ __('Laporan') }}
                     </x-nav-link>
                 </div>
@@ -89,17 +89,17 @@
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.index')">
+            <x-responsive-nav-link :href="route('admin.articles.index')" :active="request()->routeIs('admin.articles.index')">
                 {{ __('Artikel') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('news.index')" :active="request()->routeIs('news.index')">
+            <x-responsive-nav-link :href="route('admin.news.index')" :active="request()->routeIs('admin.news.index')">
                 {{ __('Berita') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.index')">
+            <x-responsive-nav-link :href="route('admin.reports.index')" :active="request()->routeIs('admin.reports.index')">
                 {{ __('Laporan') }}
             </x-responsive-nav-link>
         </div>

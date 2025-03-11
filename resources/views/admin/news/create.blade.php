@@ -12,7 +12,7 @@
 <div class="container max-w-7xl font-bold mx-auto py-6 px-4 sm:px-6 lg:px-8">
     <h1 class="text-3xl font-bold text-gray-800 mb-6">Create New News</h1>
 
-    <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md">
+    <form action="{{ route('admin.news.store') }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md">
         @csrf
 
         <!-- Title -->

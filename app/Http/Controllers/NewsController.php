@@ -11,12 +11,12 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::latest()->get();
-        return view('news.index', compact('news'));
+        return view('admin.news.index', compact('news'));
     }
 
     public function create()
     {
-        return view('news.create');
+        return view('admin.news.create');
     }
 
     public function store(Request $request)
@@ -28,23 +28,23 @@ class NewsController extends Controller
             'publisher' => 'required|max:255'
         ]);
 
-        if($request->hasFile('image')) {
+        if ($request->hasFile('image')) {
             $validated['image'] = $request->file('image')->store('news-images', 'public');
         }
 
         News::create($validated);
 
-        return redirect()->route('news.index')->with('success', 'News created successfully!');
+        return redirect()->route('admin.news.index')->with('success', 'News created successfully!');
     }
 
     public function show(News $news)
     {
-        return view('news.show', compact('news'));
+        return view('admin.news.show', compact('news'));
     }
 
     public function edit(News $news)
     {
-        return view('news.edit', compact('news'));
+        return view('admin.news.edit', compact('news'));
     }
 
     public function update(Request $request, News $news)
@@ -56,9 +56,8 @@ class NewsController extends Controller
             'publisher' => 'required|max:255'
         ]);
 
-        if($request->hasFile('image')) {
-            // Hapus gambar lama jika ada
-            if($news->image) {
+        if ($request->hasFile('image')) {
+            if ($news->image) {
                 Storage::disk('public')->delete($news->image);
             }
             $validated['image'] = $request->file('image')->store('news-images', 'public');
@@ -66,15 +65,15 @@ class NewsController extends Controller
 
         $news->update($validated);
 
-        return redirect()->route('news.index')->with('success', 'News updated successfully!');
+        return redirect()->route('admin.news.index')->with('success', 'News updated successfully!');
     }
 
     public function destroy(News $news)
     {
-        if($news->image) {
+        if ($news->image) {
             Storage::disk('public')->delete($news->image);
         }
         $news->delete();
-        return redirect()->route('news.index')->with('success', 'News deleted successfully!');
+        return redirect()->route('admin.news.index')->with('success', 'News deleted successfully!');
     }
 }

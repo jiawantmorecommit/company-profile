@@ -12,7 +12,7 @@
 <div class="container max-w-7xl font-bold mx-auto py-6 px-4 sm:px-6 lg:px-8">
     <h1 class="text-3xl font-bold text-gray-800 mb-6">Edit News</h1>
 
-    <form action="{{ route('news.update', $news->id) }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md">
+    <form action="{{ route('admin.news.update', $news->id) }}" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md">
         @csrf
         @method('PUT')
 

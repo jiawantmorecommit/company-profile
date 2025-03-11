@@ -24,7 +24,7 @@
     </div>
 
     <div class="mt-6">
-        <a href="{{ route('news.index') }}" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300">Back to List</a>
+        <a href="{{ route('admin.news.index') }}" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300">Back to List</a>
     </div>
 </div>
 @endsection

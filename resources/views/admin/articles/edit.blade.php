@@ -17,7 +17,7 @@
 
     {{-- "Card" container untuk form --}}
     <div class="bg-white shadow rounded-lg p-6">
-        <form action="{{ route('articles.update', $article->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.articles.update', $article->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 

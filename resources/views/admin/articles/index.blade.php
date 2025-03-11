@@ -10,7 +10,7 @@
 <div class="container max-w-7xl font-bold mx-auto py-6 px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center mb-8">
         <h1 class="text-3xl font-bold text-gray-800">Daftar Artikel</h1>
-        <a href="{{ route('articles.create') }}" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition duration-200">
+        <a href="{{ route('admin.articles.create') }}" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition duration-200">
             + Buat Artikel Baru
         </a>
     </div>
@@ -46,13 +46,13 @@
                 </p>
 
                 <div class="flex items-center space-x-2">
-                    <a href="{{ route('articles.show', $article->id) }}" class="text-blue-500 hover:text-blue-600 text-sm px-3 py-1.5 border border-blue-500 rounded transition duration-200">
+                    <a href="{{ route('admin.articles.show', $article->id) }}" class="text-blue-500 hover:text-blue-600 text-sm px-3 py-1.5 border border-blue-500 rounded transition duration-200">
                         Lihat
                     </a>
-                    <a href="{{ route('articles.edit', $article->id) }}" class="text-yellow-500 hover:text-yellow-600 text-sm px-3 py-1.5 border border-yellow-500 rounded transition duration-200">
+                    <a href="{{ route('admin.articles.edit', $article->id) }}" class="text-yellow-500 hover:text-yellow-600 text-sm px-3 py-1.5 border border-yellow-500 rounded transition duration-200">
                         Edit
                     </a>
-                    <form action="{{ route('articles.destroy', $article->id) }}" method="POST" class="inline">
+                    <form action="{{ route('admin.articles.destroy', $article->id) }}" method="POST" class="inline">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="text-red-500 hover:text-red-600 text-sm px-3 py-1.5 border border-red-500 rounded transition duration-200" onclick="return confirm('Yakin ingin menghapus artikel ini?')">

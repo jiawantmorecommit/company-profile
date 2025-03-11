@@ -75,7 +75,7 @@
                 <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0">
                     <!-- Home -->
                     <li>
-                        <a href="#" id="nav-home"
+                        <a href="/" id="nav-home"
                             class="block py-4 px-3 text-white rounded-sm hover:text-blue-600 transition-colors font-medium">
                             Home
                         </a>
@@ -116,10 +116,10 @@
                         <div id="dropdownNavbar2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-full md:w-44 border border-gray-100">
                             <ul class="py-2 text-sm text-gray-700">
                                 <li>
-                                    <a href="#" id="dropdown-info1" class="block px-4 py-3 hover:bg-gray-50">Info 1</a>
+                                    <a href="#" id="dropdown-info1" class="block px-4 py-3 hover:bg-gray-50">Artikel & Berita</a>
                                 </li>
                                 <li>
-                                    <a href="#" id="dropdown-info2" class="block px-4 py-3 hover:bg-gray-50">Info 2</a>
+                                    <a href="{{ route('public.news.index') }}" id="dropdown-info2" class="block px-4 py-3 hover:bg-gray-50">Info 2</a>
                                 </li>
                             </ul>
                         </div>
