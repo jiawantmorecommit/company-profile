@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ config('app.name') }}</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="{{ asset('bpot-mini.png') }}">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="{{ asset('landing-page/css/style.css') }}">
     @vite(['resources/js/app.js'])
@@ -39,8 +40,16 @@
     .card-item {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-</style>
 
+    #navbar {
+        transition: transform 0.3s ease-in-out, background-color 0.3s;
+    }
+
+    .navbar-hidden {
+        transform: translateY(-100%);
+    }   
+</style>
+    
 <body>
 
 
@@ -147,65 +156,81 @@
 
 
     <script>
-        window.addEventListener('scroll', function() {
-            // Get all elements by ID
-            const navbar = document.getElementById('navbar');
-            const logo = document.getElementById('logo');
-            const loginBtn = document.getElementById('login-link');
+        // window.addEventListener('scroll', function() {
 
-            // Navigation items
-            const navHome = document.getElementById('nav-home');
-            const navTentang = document.getElementById('nav-tentang');
-            const navInformasi = document.getElementById('nav-informasi');
-            const navContact = document.getElementById('nav-contact');
+        //     let lastScroll = 0;
+        //     const navbar = document.getElementById('navbar');
+        //     const logo = document.getElementById('logo');
+        //     const loginBtn = document.getElementById('login-link');
+        //     const navHome = document.getElementById('nav-home');
+        //     const navTentang = document.getElementById('nav-tentang');
+        //     const navInformasi = document.getElementById('nav-informasi');
+        //     const navContact = document.getElementById('nav-contact');
+        //     const dropdownProfil = document.getElementById('dropdown-profil');
+        //     const dropdownLaporan = document.getElementById('dropdown-laporan');
+        //     const dropdownInfo1 = document.getElementById('dropdown-info1');
+        //     const dropdownInfo2 = document.getElementById('dropdown-info2');
 
-            // Dropdown items
-            const dropdownProfil = document.getElementById('dropdown-profil');
-            const dropdownLaporan = document.getElementById('dropdown-laporan');
-            const dropdownInfo1 = document.getElementById('dropdown-info1');
-            const dropdownInfo2 = document.getElementById('dropdown-info2');
 
-            if (window.scrollY > 50) {
-                // Scroll down state
-                navbar.classList.remove('bg-transparent');
-                navbar.classList.add('bg-white', 'shadow-sm');
-                logo.src = "{{ asset('landing-page/logo/Logo 2.png') }}";
+        //     if (window.scrollY > 50) {
 
-                // Navigation items
-                [navHome, navTentang, navInformasi, navContact].forEach(item => {
-                    item.classList.remove('text-white');
-                    item.classList.add('text-gray-900');
-                });
+        //         navbar.classList.remove('bg-transparent');
+        //         navbar.classList.add('bg-white', 'shadow-sm');
+        //         logo.src = "{{ asset('landing-page/logo/Logo 2.png') }}";
 
-                // Dropdown items
-                [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
-                    item.classList.remove('text-gray-700');
-                    item.classList.add('text-gray-900');
-                });
 
-                // Login button styling
-                loginBtn.classList.add('text-white');
-                loginBtn.classList.remove('text-gray-900');
+        //         [navHome, navTentang, navInformasi, navContact].forEach(item => {
+        //             item.classList.remove('text-white');
+        //             item.classList.add('text-gray-900');
+        //         });
 
-            } else {
-                // Top state
-                navbar.classList.add('bg-transparent');
-                navbar.classList.remove('bg-white', 'shadow-sm');
-                logo.src = "{{ asset('landing-page/logo/Logo 1.png') }}";
 
-                // Navigation items
-                [navHome, navTentang, navInformasi, navContact].forEach(item => {
-                    item.classList.add('text-white');
-                    item.classList.remove('text-gray-900');
-                });
+        //         [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
+        //             item.classList.remove('text-gray-700');
+        //             item.classList.add('text-gray-900');
+        //         });
 
-                // Dropdown items
-                [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
-                    item.classList.add('text-gray-700');
-                    item.classList.remove('text-gray-900');
-                });
-            }
-        });
+
+        //         loginBtn.classList.add('text-white');
+        //         loginBtn.classList.remove('text-gray-900');
+
+        //     } else {
+
+        //         navbar.classList.add('bg-transparent');
+        //         navbar.classList.remove('bg-white', 'shadow-sm');
+        //         logo.src = "{{ asset('landing-page/logo/Logo 1.png') }}";
+
+
+        //         [navHome, navTentang, navInformasi, navContact].forEach(item => {
+        //             item.classList.add('text-white');
+        //             item.classList.remove('text-gray-900');
+        //         });
+
+
+        //         [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
+        //             item.classList.add('text-gray-700');
+        //             item.classList.remove('text-gray-900');
+        //         });
+        //     }
+
+        //     const footer = document.querySelector('footer');
+        //     const currentScroll = window.scrollY;
+        //     const footerOffset = footer.offsetTop;
+
+        //     if (currentScroll >= footerOffset) {
+        //         if (currentScroll > lastScroll) {
+        //             navbar.classList.add('navbar-hidden');
+        //         } else {
+        //             navbar.classList.remove('navbar-hidden');
+        //         }
+        //     } else {
+        //         navbar.classList.remove('navbar-hidden');
+        //     }
+
+        //     lastScroll = currentScroll;
+        // });
+
+
 
         // document.addEventListener('DOMContentLoaded', function() {
         //     Swal.fire({
