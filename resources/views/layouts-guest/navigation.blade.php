@@ -47,9 +47,29 @@
 
     .navbar-hidden {
         transform: translateY(-100%);
-    }   
+    }
+
+    .cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: black;
+        margin-left: 4px;
+        animation: blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
 </style>
-    
+
 <body>
 
 
@@ -103,7 +123,7 @@
                         <div id="dropdownNavbar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-full md:w-44 border border-gray-100">
                             <ul class="py-2 text-sm text-gray-700">
                                 <li>
-                                    <a href="#" id="dropdown-profil" class="block px-4 py-3 hover:bg-gray-50">Profil Perusahaan</a>
+                                    <a href="{{ route('profile-company') }}" id="dropdown-profil" class="block px-4 py-3 hover:bg-gray-50">Profil Perusahaan</a>
                                 </li>
                                 <li>
                                     <a href="#" id="dropdown-laporan" class="block px-4 py-3 hover:bg-gray-50">Laporan Tahunan</a>
@@ -156,79 +176,79 @@
 
 
     <script>
-        // window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function() {
 
-        //     let lastScroll = 0;
-        //     const navbar = document.getElementById('navbar');
-        //     const logo = document.getElementById('logo');
-        //     const loginBtn = document.getElementById('login-link');
-        //     const navHome = document.getElementById('nav-home');
-        //     const navTentang = document.getElementById('nav-tentang');
-        //     const navInformasi = document.getElementById('nav-informasi');
-        //     const navContact = document.getElementById('nav-contact');
-        //     const dropdownProfil = document.getElementById('dropdown-profil');
-        //     const dropdownLaporan = document.getElementById('dropdown-laporan');
-        //     const dropdownInfo1 = document.getElementById('dropdown-info1');
-        //     const dropdownInfo2 = document.getElementById('dropdown-info2');
-
-
-        //     if (window.scrollY > 50) {
-
-        //         navbar.classList.remove('bg-transparent');
-        //         navbar.classList.add('bg-white', 'shadow-sm');
-        //         logo.src = "{{ asset('landing-page/logo/Logo 2.png') }}";
+            let lastScroll = 0;
+            const navbar = document.getElementById('navbar');
+            const logo = document.getElementById('logo');
+            const loginBtn = document.getElementById('login-link');
+            const navHome = document.getElementById('nav-home');
+            const navTentang = document.getElementById('nav-tentang');
+            const navInformasi = document.getElementById('nav-informasi');
+            const navContact = document.getElementById('nav-contact');
+            const dropdownProfil = document.getElementById('dropdown-profil');
+            const dropdownLaporan = document.getElementById('dropdown-laporan');
+            const dropdownInfo1 = document.getElementById('dropdown-info1');
+            const dropdownInfo2 = document.getElementById('dropdown-info2');
 
 
-        //         [navHome, navTentang, navInformasi, navContact].forEach(item => {
-        //             item.classList.remove('text-white');
-        //             item.classList.add('text-gray-900');
-        //         });
+            if (window.scrollY > 50) {
+
+                navbar.classList.remove('bg-transparent');
+                navbar.classList.add('bg-white', 'shadow-sm');
+                logo.src = "{{ asset('landing-page/logo/Logo 2.png') }}";
 
 
-        //         [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
-        //             item.classList.remove('text-gray-700');
-        //             item.classList.add('text-gray-900');
-        //         });
+                [navHome, navTentang, navInformasi, navContact].forEach(item => {
+                    item.classList.remove('text-white');
+                    item.classList.add('text-gray-900');
+                });
 
 
-        //         loginBtn.classList.add('text-white');
-        //         loginBtn.classList.remove('text-gray-900');
-
-        //     } else {
-
-        //         navbar.classList.add('bg-transparent');
-        //         navbar.classList.remove('bg-white', 'shadow-sm');
-        //         logo.src = "{{ asset('landing-page/logo/Logo 1.png') }}";
+                [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
+                    item.classList.remove('text-gray-700');
+                    item.classList.add('text-gray-900');
+                });
 
 
-        //         [navHome, navTentang, navInformasi, navContact].forEach(item => {
-        //             item.classList.add('text-white');
-        //             item.classList.remove('text-gray-900');
-        //         });
+                loginBtn.classList.add('text-white');
+                loginBtn.classList.remove('text-gray-900');
+
+            } else {
+
+                navbar.classList.add('bg-transparent');
+                navbar.classList.remove('bg-white', 'shadow-sm');
+                logo.src = "{{ asset('landing-page/logo/Logo 1.png') }}";
 
 
-        //         [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
-        //             item.classList.add('text-gray-700');
-        //             item.classList.remove('text-gray-900');
-        //         });
-        //     }
+                [navHome, navTentang, navInformasi, navContact].forEach(item => {
+                    item.classList.add('text-white');
+                    item.classList.remove('text-gray-900');
+                });
 
-        //     const footer = document.querySelector('footer');
-        //     const currentScroll = window.scrollY;
-        //     const footerOffset = footer.offsetTop;
 
-        //     if (currentScroll >= footerOffset) {
-        //         if (currentScroll > lastScroll) {
-        //             navbar.classList.add('navbar-hidden');
-        //         } else {
-        //             navbar.classList.remove('navbar-hidden');
-        //         }
-        //     } else {
-        //         navbar.classList.remove('navbar-hidden');
-        //     }
+                [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
+                    item.classList.add('text-gray-700');
+                    item.classList.remove('text-gray-900');
+                });
+            }
 
-        //     lastScroll = currentScroll;
-        // });
+            const footer = document.querySelector('footer');
+            const currentScroll = window.scrollY;
+            const footerOffset = footer.offsetTop;
+
+            if (currentScroll >= footerOffset) {
+                if (currentScroll > lastScroll) {
+                    navbar.classList.add('navbar-hidden');
+                } else {
+                    navbar.classList.remove('navbar-hidden');
+                }
+            } else {
+                navbar.classList.remove('navbar-hidden');
+            }
+
+            lastScroll = currentScroll;
+        });
 
 
 
@@ -249,7 +269,7 @@
         //         timer: 3000,
         //         allowOutsideClick: false
         //     });
-        // });
+        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
