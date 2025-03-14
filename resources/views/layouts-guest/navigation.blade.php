@@ -41,12 +41,17 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    #navbar {
-        transition: transform 0.3s ease-in-out, background-color 0.3s;
-    }
-
     .navbar-hidden {
         transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #navbar {
+        transition: all 0.3s ease-in-out;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
     .cursor {
@@ -111,7 +116,7 @@
                     </li>
 
                     <!-- Tentang Kami -->
-                    <li class="dropdown relative">
+                    <!-- <li class="dropdown relative">
                         <button id="nav-tentang" data-dropdown-toggle="dropdownNavbar"
                             class="flex items-center justify-between w-full py-4 px-3 text-white rounded-sm hover:text-blue-600 transition-colors font-medium">
                             Tentang Kami
@@ -130,6 +135,13 @@
                                 </li>
                             </ul>
                         </div>
+                    </li> -->
+
+                    <li>
+                        <a href="{{ route('profile-company') }}" id="nav-tentang"
+                            class="block py-4 px-3 text-white rounded-sm hover:text-blue-600 transition-colors font-medium">
+                            Tentang Kami
+                        </a>
                     </li>
 
                     <!-- Informasi -->
@@ -172,104 +184,130 @@
     @yield ('content')
 
 
-
-
-
     <script>
-        window.addEventListener('scroll', function() {
-
+        document.addEventListener("DOMContentLoaded", function() {
             let lastScroll = 0;
-            const navbar = document.getElementById('navbar');
-            const logo = document.getElementById('logo');
-            const loginBtn = document.getElementById('login-link');
-            const navHome = document.getElementById('nav-home');
-            const navTentang = document.getElementById('nav-tentang');
-            const navInformasi = document.getElementById('nav-informasi');
-            const navContact = document.getElementById('nav-contact');
-            const dropdownProfil = document.getElementById('dropdown-profil');
-            const dropdownLaporan = document.getElementById('dropdown-laporan');
-            const dropdownInfo1 = document.getElementById('dropdown-info1');
-            const dropdownInfo2 = document.getElementById('dropdown-info2');
-
-
-            if (window.scrollY > 50) {
-
-                navbar.classList.remove('bg-transparent');
-                navbar.classList.add('bg-white', 'shadow-sm');
-                logo.src = "{{ asset('landing-page/logo/Logo 2.png') }}";
-
-
-                [navHome, navTentang, navInformasi, navContact].forEach(item => {
-                    item.classList.remove('text-white');
-                    item.classList.add('text-gray-900');
-                });
-
-
-                [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
-                    item.classList.remove('text-gray-700');
-                    item.classList.add('text-gray-900');
-                });
-
-
-                loginBtn.classList.add('text-white');
-                loginBtn.classList.remove('text-gray-900');
-
-            } else {
-
-                navbar.classList.add('bg-transparent');
-                navbar.classList.remove('bg-white', 'shadow-sm');
-                logo.src = "{{ asset('landing-page/logo/Logo 1.png') }}";
-
-
-                [navHome, navTentang, navInformasi, navContact].forEach(item => {
-                    item.classList.add('text-white');
-                    item.classList.remove('text-gray-900');
-                });
-
-
-                [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
-                    item.classList.add('text-gray-700');
-                    item.classList.remove('text-gray-900');
-                });
-            }
 
             const footer = document.querySelector('footer');
-            const currentScroll = window.scrollY;
-            const footerOffset = footer.offsetTop;
+            const navbar = document.getElementById('navbar');
 
-            if (currentScroll >= footerOffset) {
-                if (currentScroll > lastScroll) {
-                    navbar.classList.add('navbar-hidden');
+            if (!footer || !navbar) {
+                console.error("Footer or navbar element not found");
+                return;
+            }
+
+            window.addEventListener('scroll', function() {
+                const logo = document.getElementById('logo');
+                const loginBtn = document.getElementById('login-link');
+                const navHome = document.getElementById('nav-home');
+                const navTentang = document.getElementById('nav-tentang');
+                const navInformasi = document.getElementById('nav-informasi');
+                const navContact = document.getElementById('nav-contact');
+                const dropdownProfil = document.getElementById('dropdown-profil');
+                const dropdownLaporan = document.getElementById('dropdown-laporan');
+                const dropdownInfo1 = document.getElementById('dropdown-info1');
+                const dropdownInfo2 = document.getElementById('dropdown-info2');
+
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('bg-transparent');
+                    navbar.classList.add('bg-white', 'shadow-sm');
+                    logo.src = "{{ asset('landing-page/logo/Logo 2.png') }}";
+
+                    [navHome, navTentang, navInformasi, navContact].forEach(item => {
+                        if (item) {
+                            item.classList.remove('text-white');
+                            item.classList.add('text-gray-900');
+                        }
+                    });
+
+                    [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
+                        if (item) {
+                            item.classList.remove('text-gray-700');
+                            item.classList.add('text-gray-900');
+                        }
+                    });
+
+                    if (loginBtn) {
+                        loginBtn.classList.add('text-white');
+                        loginBtn.classList.remove('text-gray-900');
+                    }
+                } else {
+                    navbar.classList.add('bg-transparent');
+                    navbar.classList.remove('bg-white', 'shadow-sm');
+                    logo.src = "{{ asset('landing-page/logo/Logo 1.png') }}";
+
+                    [navHome, navTentang, navInformasi, navContact].forEach(item => {
+                        if (item) {
+                            item.classList.add('text-white');
+                            item.classList.remove('text-gray-900');
+                        }
+                    });
+
+                    [dropdownProfil, dropdownLaporan, dropdownInfo1, dropdownInfo2].forEach(item => {
+                        if (item) {
+                            item.classList.add('text-gray-700');
+                            item.classList.remove('text-gray-900');
+                        }
+                    });
+                }
+
+                const currentScroll = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const footerHeight = footer.offsetHeight;
+
+                
+                const approachingFooter = (documentHeight - windowHeight - currentScroll) < footerHeight;
+
+                if (approachingFooter) {
+                    
+                    if (currentScroll > lastScroll) {
+                        navbar.classList.add('navbar-hidden');
+                    } else {
+                        navbar.classList.remove('navbar-hidden');
+                    }
                 } else {
                     navbar.classList.remove('navbar-hidden');
                 }
-            } else {
-                navbar.classList.remove('navbar-hidden');
+
+                lastScroll = currentScroll;
+            });
+        }); 
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const text = "Bergabung dengan BPOT Sekarang !";
+            const typingElement = document.getElementById('typing-effect');
+            const cursorElement = document.querySelector('.cursor');
+            let index = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentText = typingElement.textContent;
+
+                if (!isDeleting) {
+                    typingElement.textContent = text.substring(0, index + 1);
+                    index++;
+                    if (index === text.length) {
+                        isDeleting = true;
+                        setTimeout(type, 1000);
+                    } else {
+                        setTimeout(type, 100);
+                    }
+                } else {
+                    typingElement.textContent = currentText.substring(0, currentText.length - 1);
+                    index--;
+
+                    if (typingElement.textContent === "") {
+                        isDeleting = false;
+                        setTimeout(type, 500);
+                    } else {
+                        setTimeout(type, 50);
+                    }
+                }
             }
 
-            lastScroll = currentScroll;
+            type();
         });
-
-
-
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     Swal.fire({
-        //         title: 'Selamat Datang! 🎉',
-        //         html: '<p class="text-gray-600 mb-4">Dapatkan penawaran khusus untuk investor baru!</p>',
-        //         icon: 'info',
-        //         showCancelButton: false,
-        //         confirmButtonText: 'Mulai Sekarang',
-        //         confirmButtonColor: '#2563eb',
-        //         customClass: {
-        //             popup: 'swal2-popup-custom rounded-xl',
-        //             title: 'swal2-title-custom text-2xl font-bold text-gray-800',
-        //             htmlContainer: 'swal2-html-custom',
-        //             confirmButton: 'swal2-confirm-custom px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors'
-        //         },
-        //         timer: 3000,
-        //         allowOutsideClick: false
-        //     });
-        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>

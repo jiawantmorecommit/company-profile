@@ -2,38 +2,27 @@
 @section('content')
 <div class="bg-white">
     <div class="relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-600">
-        <!-- SVG Background Elements -->
         <div class="absolute inset-0 z-0">
-            <!-- Line Chart Pattern -->
             <svg class="absolute bottom-0 right-0 opacity-20 w-48 md:w-auto" width="574" height="364" viewBox="0 0 574 364" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 363.5L27.5 327L54.5 294L82 256.5L109 221.5L136.5 190L164 156.5L191.5 125L218.5 94.5L246 62L273.5 34L300.5 6.5" stroke="white" stroke-width="2" stroke-linejoin="round" />
                 <path d="M315 363.5L342.5 327L369.5 294L397 256.5L424 221.5L451.5 190L479 156.5L506.5 125L533.5 94.5L561 62L588.5 34L615.5 6.5" stroke="white" stroke-width="2" stroke-linejoin="round" />
             </svg>
-
-            <!-- Building Icon -->
             <svg class="absolute top-1/4 left-4 md:left-10 opacity-10 w-16 h-16 md:w-24 md:h-24" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
                 <path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0H5m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 5h1m4-5h1m-1 5h1m-5 5h5" />
             </svg>
-
-            <!-- Shield Icon -->
             <svg class="absolute top-12 right-12 md:top-20 md:right-20 opacity-15 w-12 h-12 md:w-16 md:h-16" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
         </div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="py-12 md:py-24">
                 <div class="relative">
-                    <!-- Main Text -->
                     <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6 relative z-10">
                         PT. Bumiputera Sekuritas
                     </h1>
-
-                    <!-- Animated Circle Graphic -->
                     <svg class="absolute -top-6 -left-6 w-24 h-24 md:-top-8 md:-left-8 md:w-32 md:h-32 text-white opacity-20 animate-pulse" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="8" fill="none" stroke-dasharray="5 5" />
                     </svg>
-
                     <p class="text-lg sm:text-xl text-gray-50 max-w-3xl relative z-10">
                         Financial Services Provider in the Indonesian Capital Market
                     </p>
@@ -43,11 +32,11 @@
     </div>
 </div>
 
-<!-- Company Overview -->
+
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <div class="max-w-4xl">
+    <div class="max-w-7xl">
         <div class="flex items-center gap-3 mb-12">
-            <!-- Ikon Judul -->
+
             <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
             </svg>
@@ -55,7 +44,7 @@
         </div>
 
         <div class="space-y-8">
-            <!-- Poin 1 -->
+
             <div class="flex gap-5">
                 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,11 +52,11 @@
                     </svg>
                 </div>
                 <p class="text-gray-600 leading-relaxed">
-                    PT Bumiputera Sekuritas adalah Perusahaan Penyedia Jasa Keuangan di bidang Pasar Modal yang melayani Nasabah individu maupun institusi berdasarkan izin Badan Pengawas Pasar Modal/Otoritas Jasa Keuangan (OJK) nomor KEP 158/PM/1991 tanggal 5 Desember 1991, izin usaha di Bidang Pedagang Perantara Efek dan KEP 157/PM/1991 tanggal 5 Desember 1991, izin usaha di Bidang Penjamin Emisi Efek.
+                    PT Bumiputera Sekuritas merupakan Perusahaan Penyedia Jasa Keuangan di bidang Pasar Modal yang melayani nasabah individu dan institusi, beroperasi berdasarkan izin OJK nomor KEP 158/PM/1991 (Pedagang Perantara Efek) dan KEP 157/PM/1991 (Penjamin Emisi Efek). Sebagai anak usaha AJB Bumiputera 1912, perusahaan ini telah berpengalaman lebih dari 15 tahun di industri Pasar Modal Indonesia. Untuk meningkatkan layanan, Bumiputera Sekuritas meluncurkan inovasi produk Bumiputera Online Trading (BPOT), sebuah platform perdagangan saham berbasis teknologi yang bertujuan memudahkan transaksi online sekaligus meningkatkan jumlah nasabah dan nilai transaksi.
                 </p>
             </div>
 
-            <!-- Poin 2 -->
+
             <div class="flex gap-5">
                 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,11 +64,11 @@
                     </svg>
                 </div>
                 <p class="text-gray-600 leading-relaxed">
-                    Perusahaan melakukan inovasi dengan meluncurkan produk online trading berupa aplikasi perdagangan saham yang berbasis teknologi yang diberi nama Bumiputera Online Trading ("BPOT"). Online trading ini bertujuan untuk meningkatkan layanan kepada nasabah berupa sistem transaksi saham secara online dan diharapkan dapat meningkatkan jumlah Nasabah individu serta meningkatkan nilai transaksi.
+                    Perusahaan berkomitmen memperluas partisipasi dalam pengembangan Pasar Modal Indonesia, yang tercermin dari pertumbuhan jumlah nasabah baik individu maupun institusi. Sebagai perusahaan sekuritas terpercaya, Bumiputera Sekuritas menyediakan layanan komprehensif meliputi Perdagangan Efek (Equity & Debt Capital Market), Investment Banking, dan Research. Dukungan sumber daya manusia profesional serta pengalaman panjang menjadi fondasi dalam memberikan layanan prima sesuai visi-misi perusahaan.
                 </p>
             </div>
 
-            <!-- Poin 3 -->
+
             <div class="flex gap-5">
                 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
                     <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,27 +76,27 @@
                     </svg>
                 </div>
                 <p class="text-gray-600 leading-relaxed">
-                    Perusahaan berkomitmen untuk terus memperluas dan memperkokoh partisipasi dalam mengembangkan Pasar Modal Indonesia yang dibuktikan dengan terus berkembangnya jumlah Nasabah, baik Nasabah individu maupun institusi. Perusahaan terus mengembangkan diri dan memberikan layanan terbaik bagi Nasabah sesuai Visi dan Misi sebagai Perusahaan dengan layanan terbaik di Industri Pasar Modal Indonesia.
+                    Dengan fokus pada inovasi dan nilai tambah, Bumiputera Sekuritas merancang produk investasi yang disesuaikan kebutuhan nasabah untuk mencapai return optimal. Perseroan terus memperkokoh posisi sebagai mitra terpercaya melalui penyempurnaan layanan, peningkatan kompetensi SDM, serta adaptasi teknologi terkini, sehingga mampu mempertahankan reputasi sebagai penyedia jasa pasar modal berkelas dengan layanan terbaik di Indonesia.
                 </p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Services -->
+
 <div class="bg-gray-50 border-y border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div class="max-w-4xl">
+        <div class="max-w-7xl">
             <div class="flex items-center gap-3 mb-12">
-                <!-- Ikon Judul -->
+
                 <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
                 </svg>
-                <h2 class="text-3xl font-semibold text-gray-900">Our Services</h2>
+                <h2 class="text-3xl font-semibold text-gray-900">Keunggulan Kami</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-                <!-- Layanan 1 -->
+
                 <div class="group flex gap-5 p-5 hover:bg-white hover:shadow-lg transition-all rounded-xl">
                     <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                         <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -115,12 +104,12 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Securities Brokerage</h3>
-                        <p class="text-gray-600">Comprehensive securities brokerage services for both individual and institutional investors.</p>
+                        <h3 class="text-xl font-medium text-gray-900 mb-3">Perantara Pedagang Efek</h3>
+                        <p class="text-gray-600">Layanan pialang sekuritas yang komprehensif untuk investor perorangan dan institusi.</p>
                     </div>
                 </div>
 
-                <!-- Layanan 2 -->
+
                 <div class="group flex gap-5 p-5 hover:bg-white hover:shadow-lg transition-all rounded-xl">
                     <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center group-hover:bg-green-200 transition-colors">
                         <svg class="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -128,12 +117,12 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Underwriting</h3>
-                        <p class="text-gray-600">Professional underwriting services for companies seeking to raise capital in the public markets.</p>
+                        <h3 class="text-xl font-medium text-gray-900 mb-3">Penjaminan Emisi</h3>
+                        <p class="text-gray-600">Layanan penjaminan emisi profesional untuk perusahaan yang ingin meningkatkan modal di pasar publik.</p>
                     </div>
                 </div>
 
-                <!-- Layanan 3 -->
+
                 <div class="group flex gap-5 p-5 hover:bg-white hover:shadow-lg transition-all rounded-xl">
                     <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center group-hover:bg-orange-200 transition-colors">
                         <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -141,12 +130,12 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Online Trading</h3>
-                        <p class="text-gray-600">Bumiputera Online Trading (BPOT) platform for convenient, secure, and efficient stock trading.</p>
+                        <h3 class="text-xl font-medium text-gray-900 mb-3">Trading Online</h3>
+                        <p class="text-gray-600">Platform Bumiputera Online Trading (BPOT) untuk perdagangan saham yang nyaman, aman, dan efisien.</p>
                     </div>
                 </div>
 
-                <!-- Layanan 4 -->
+
                 <div class="group flex gap-5 p-5 hover:bg-white hover:shadow-lg transition-all rounded-xl">
                     <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center group-hover:bg-purple-200 transition-colors">
                         <svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -155,8 +144,9 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-xl font-medium text-gray-900 mb-3">Investment Advisory</h3>
-                        <p class="text-gray-600">Expert guidance and advice to help clients make informed investment decisions.</p>
+                        <h3 class="text-xl font-medium text-gray-900 mb-3">Penasihat Investasi</h3>
+                        <p class="text-gray-600">Panduan dan saran dari para ahli untuk membantu klien membuat keputusan investasi yang tepat.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -164,16 +154,19 @@
     </div>
 </div>
 
-<!-- Organizational Structure -->
+
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <div class="max-w-4xl">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-12" data-aos="fade-up">Leadership</h2>
+    <div class="max-w-7xl">
+        <!-- Section Manajemen -->
+        <h2 class="text-3xl font-semibold text-gray-900 mb-12" data-aos="fade-up">Manajemen</h2>
         <div class="space-y-16">
+            <!-- Dewan Komisaris -->
             <div>
                 <h3 class="text-xl font-medium text-gray-900 mb-8 border-b border-gray-200 pb-3" data-aos="fade-up">
-                    Board of Commissioners
+                    Dewan Komisaris
                 </h3>
                 <div class="space-y-12">
+                    <!-- Anggota Dewan Komisaris 1 -->
                     <div class="flex flex-col gap-8 md:gap-12 md:flex-row md:items-center" data-aos="fade-right">
                         <div class="w-full md:w-1/2">
                             <div class="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-r from-white to-blue-800">
@@ -191,25 +184,21 @@
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 md:pl-8">
-                            <p class="text-gray-600 leading-relaxed">Bergabung dengan Bumiputera Sekuritas sejak tahun 2024, Bapak Muhammad Mufti Mubarok telah memulai karirnya sejak tahun 1994 hingga saat ini di Lembaga Pemerintahan Republik Indonesia pada bidang Organisasi Masyarakat, UMKM, Hukum, dan bidang Advokasi area Perlindungan Konsumen.
-                            <p>
-                                
+                            <p class="text-gray-600 leading-relaxed">Bergabung dengan Bumiputera Sekuritas sejak tahun 2024, Bapak Muhammad Mufti Mubarok telah memulai karirnya sejak tahun 1994 hingga saat ini di Lembaga Pemerintahan Republik Indonesia pada bidang Organisasi Masyarakat, UMKM, Hukum, dan bidang Advokasi area Perlindungan Konsumen.</p>
                             <div class="mt-4 flex gap-3">
                                 <a href="#" class="text-blue-600 hover:text-blue-800">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                     </svg>
                                 </a>
-                                
                             </div>
                         </div>
                     </div>
 
-                    <!-- Member 2 -->
+                    <!-- Anggota Dewan Komisaris 2 -->
                     <div class="flex flex-col gap-8 md:gap-12 md:flex-row-reverse md:items-center" data-aos="fade-left">
                         <div class="w-full md:w-1/2">
                             <div class="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-r from-white to-blue-800">
-                                
                                 <div class="absolute inset-0">
                                     <img
                                         src="{{ asset('landing-page/hero/Linus Suseno.png') }}"
@@ -226,7 +215,6 @@
                         <div class="w-full md:w-1/2 md:pr-8">
                             <p class="text-gray-600 leading-relaxed">
                                 Bergabung dengan Bumiputera Sekuritas sejak tahun 2024, Bapak Linus N. Suseno telah memulai karirnya sejak tahun 1990 hingga saat ini di industri Tambang & Perminyakan yang kemudian diikuti dengan pengalaman industri Keuangan lainnya selama 15 tahun, dan di industri Pasar Modal Indonesia selama 9 tahun.</p>
-                            
                             <div class="mt-4 flex gap-3 justify-end">
                                 <a href="#" class="text-green-600 hover:text-green-800">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -239,18 +227,16 @@
                 </div>
             </div>
 
-            
+            <!-- Direksi -->
             <div>
                 <h3 class="text-xl font-medium text-gray-900 mb-8 border-b border-gray-200 pb-3" data-aos="fade-up">
-                    Board of Directors
+                    Direksi
                 </h3>
-
                 <div class="space-y-12">
-                    
+                    <!-- Anggota Direksi 1 -->
                     <div class="flex flex-col gap-8 md:gap-12 md:flex-row md:items-center" data-aos="fade-right" data-aos-delay="100">
                         <div class="w-full md:w-1/2">
                             <div class="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-r from-white to-blue-800">
-                                <!-- Tempat Foto -->
                                 <div class="absolute inset-0">
                                     <img
                                         src="{{ asset('landing-page/hero/Ahmad Subagja.png') }}"
@@ -277,7 +263,7 @@
                         </div>
                     </div>
 
-                   
+                    <!-- Anggota Direksi 2 -->
                     <div class="flex flex-col gap-8 md:gap-12 md:flex-row-reverse md:items-center" data-aos="fade-left" data-aos-delay="100">
                         <div class="w-full md:w-1/2">
                             <div class="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-r from-white to-blue-800">
@@ -296,7 +282,6 @@
                         <div class="w-full md:w-1/2 md:pr-8">
                             <p class="text-gray-600 leading-relaxed">
                                 Bergabung dengan Bumiputera Sekuritas sejak tahun 2023, Bapak Hidayat Nasution telah memulai karirnya sejak tahun 1994 hingga saat ini diawali sebagai Auditor selama 8 tahun, kemudian diikuti dengan karir pada industri Perbankan selama 17 tahun, dan menjabat sebagai Direktur di Badan Usaha Milik Daerah (BUMD) bidang Perkebunan di daerah Sumatera, Indonesia selama 3 tahun.</p>
-                            <!-- Social Links -->
                             <div class="mt-4 flex gap-3 justify-end">
                                 <a href="#" class="text-green-600 hover:text-green-800">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -309,8 +294,37 @@
                 </div>
             </div>
         </div>
+
+        <!-- Section Struktur Organisasi -->
+        <div class="mt-24">
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-start mb-6">Struktur Organisasi</h2>
+                <div class="flex justify-start mb-4">
+                    <button
+                        id="toggleStrukturBtn"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                        type="button">
+                        Tampilkan Struktur Organisasi
+                    </button>
+                </div>
+                <div id="strukturOrganisasiContainer" class="border-2 border-gray-300 p-4 rounded-lg hidden">
+                    <div class="bg-gray-100 flex items-center justify-center p-8 rounded">
+                        <img
+                            src="{{ asset('landing-page/images/19Feb2025STRUKTUR ORGANISASI - BPS (1)_page-0001.jpg') }}"
+                            alt="Struktur Organisasi"
+                            class="max-w-full h-auto"
+                            loading="lazy" />
+                    </div>
+                    <p class=" text-sm text-gray-500 mt-2">
+                        Struktur Organisasi Perusahaan
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
 
 <!-- Contact Section -->
 <div class="bg-gray-50 border-t border-gray-200">
@@ -347,7 +361,17 @@
         </div>
     </div>
 </div>
-</div>
+
+
+<script>
+    document.getElementById('toggleStrukturBtn').addEventListener('click', function() {
+        const container = document.getElementById('strukturOrganisasiContainer');
+        container.classList.toggle('hidden');
+        this.textContent = container.classList.contains('hidden') ?
+            'Tampilkan Struktur Organisasi' :
+            'Sembunyikan Struktur Organisasi';
+    });
+</script>
 
 @include ('layouts-guest.footer')
 @endsection
